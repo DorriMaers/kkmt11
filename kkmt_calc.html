@@ -1,70 +1,27 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <script>
-        function plus() {
-            let input1
-            let input2
-            input1 = document.getElementById("inp1")
-            input2 = document.getElementById("inp2")
-            let value1
-            let value2
-            value1 = input1.value
-            value2 = input2.value
-            let x
-            x = Number(value1) + Number(value2)
-            alert(x)
-        }
-        function minus() {
-            let input1
-            let input2
-            input1 = document.getElementById("inp1")
-            input2 = document.getElementById("inp2")
-            let value1
-            let value2
-            value1 = input1.value
-            value2 = input2.value
-            let x
-            x = Number(value1) - Number(value2)
-            alert(x)
-        }
-        function multi() {
-            let input1
-            let input2
-            input1 = document.getElementById("inp1")
-            input2 = document.getElementById("inp2")
-            let value1
-            let value2
-            value1 = input1.value
-            value2 = input2.value
-            let x
-            x = Number(value1) * Number(value2)
-            alert(x)
-        }
-        function divis() {
-            let input1
-            let input2
-            input1 = document.getElementById("inp1")
-            input2 = document.getElementById("inp2")
-            let value1
-            let value2
-            value1 = input1.value
-            value2 = input2.value
-            let x
-            x = Number(value1) / Number(value2)
-            alert(x)
-        }
-    </script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>Значение 1</p>
+    <p>Значение 1 (x)</p>
     <input id="inp1">
-    <p>Значение 2</p>
+    <p>Значение 2 (y)</p>
     <input id="inp2">
+    <p><p>Округлить число?</p>
+    <input id="round">&nbsp;<button class="helpbut" onclick="help()">ⓘ</button>
+
+    <p>Ответ:</p>
+    <p class="answer" id="answer"><br></p>
+
     <br>
+    <button onclick="plus()">x + y</button>
+    <button onclick="minus()">x - y</button>
     <br>
-    <button onclick="plus()">+</button>
-    <button onclick="minus()">-</button>
-    <button onclick="multi()">*</button>
-    <button onclick="divis()">/</button>
+    <button onclick="multi()">x · y</button>
+    <button onclick="divis()">x : y</button>
+    <br>
+    <button onclick="degree()">x<sup>y</sup></button>
+    <button onclick="sqrt()"><sup>x</sup>√(y)</button>
 </body>
